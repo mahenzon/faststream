@@ -117,7 +117,7 @@ class TestBroker(Generic[Broker]):
             "ping",
             return_value=True,
         ), mock.patch.object(
-            broker,   # TODO: remove it in 0.7
+            broker,  # TODO: remove it in 0.7
             "close",  # patch stop to save compatibility
         ):
             yield
