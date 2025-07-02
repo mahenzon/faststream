@@ -339,7 +339,7 @@ class BrokerUsecase(
         self.running = False
 
         for h in self._subscribers.values():
-            await h.close()
+            await h.stop()
 
         if self._connection is not None:
             await self._close(exc_type, exc_val, exc_tb)
